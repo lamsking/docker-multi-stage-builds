@@ -91,9 +91,3 @@ docker image push localhost:5000/pozos/api-pozos:1
 ## Notes
 - Credentials for the frontend (`USERNAME`/`PASSWORD`) and the registry are set for demo purposes only and should be replaced with secrets management in any real deployment.
 - The backend port (5000) is intentionally not exposed to the host — only reachable inside the Docker network.
-
-## What I'd improve next
-- Replace hardcoded credentials with Docker secrets or environment injection at deploy time
-- Add a `.env` file for configurable ports/credentials instead of editing `index.php` directly
-- Add a healthcheck to the Compose file so the frontend waits for the API to be ready
-- Push image builds through a CI pipeline (see `gitlab-ci-pipeline` / `jenkins-cicd-pipeline`) instead of manual tagging/pushing
